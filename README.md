@@ -66,7 +66,5 @@ then open http://localhost:8000/.
 
 ## Credits
 
-Co-built with [Claude Code](https://claude.com/claude-code) — from the
-original one-off page through the JSON-driven refactor, the landing page and the
-GitHub Pages deployment. Design & editorial:
-Muhammad Asadullah (Asad) ([LinkedIn](https://www.linkedin.com/in/masad1)).
+[Claude Code](https://claude.com/claude-code) and Muhammad Asadullah (Asad) ([LinkedIn](https://www.linkedin.com/in/masad1))  — from the
+original one-off page through the JSON-driven refactor, the landing page and the GitHub Pages deployment.
