@@ -1,0 +1,202 @@
+{
+  "id": "norway-england-qf",
+  "meta": {
+    "title": "NOR 1–2 ENG · A Quarter-final in Data",
+    "description": "Norway 1-2 England, FIFA World Cup 2026 quarter-final, told minute by minute through data."
+  },
+  "competition": {
+    "tournament": "FIFA World Cup 2026",
+    "round": "Quarter-final · Match 99",
+    "venue": "Hard Rock Stadium, Miami · 11 July"
+  },
+  "teams": {
+    "home": { "name": "Norway", "short": "NOR", "color": "#C8102E", "textOnColor": "#EFF2EC" },
+    "away": { "name": "England", "short": "ENG", "color": "#EFF2EC", "textOnColor": "#0D1411" }
+  },
+  "score": {
+    "home": 1,
+    "away": 2,
+    "note": "After extra time · 120 minutes"
+  },
+  "durationMinutes": 120,
+  "hero": {
+    "subHtml": "The first ever World Cup meeting between the two. The furthest Norway has ever gone. And <strong>Jude Bellingham</strong>, twice, dragging England into a semi-final in the Miami heat."
+  },
+  "timeline": {
+    "kicker": "Part one",
+    "heading": "How it happened",
+    "lede": "Six moments decided this match. The scroll bar is your match clock.",
+    "events": [
+      {
+        "minute": 0,
+        "minuteLabel": "0'",
+        "type": "neutral",
+        "tag": "Kick-off",
+        "title": "Hot, muggy, hostile",
+        "textHtml": "A July afternoon in South Florida, 64,000 inside Hard Rock Stadium. Norway arrive having never been this far. England arrive having survived Mexico in the round of 32, rescued that night by Bellingham."
+      },
+      {
+        "minute": 36,
+        "minuteLabel": "36'",
+        "type": "goal-home",
+        "tag": "Goal · Norway",
+        "title": "Schjelderup stuns England",
+        "textHtml": "<strong>Andreas Schjelderup</strong> gives Norway the lead against the run of England's early pressure. The red wall of Norwegian fans erupts. Haaland's pre-match mind games suddenly look justified."
+      },
+      {
+        "minute": 47,
+        "minuteLabel": "45+2'",
+        "type": "goal-away",
+        "tag": "Goal · England",
+        "title": "Bellingham answers before the break",
+        "textHtml": "On the stroke of half time, <strong>Jude Bellingham</strong> strikes. Just as he did against Mexico, England's number 10 shows up exactly when the game demands it. 1–1 at the interval, and the momentum flips."
+      },
+      {
+        "minute": 70,
+        "minuteLabel": "2H",
+        "type": "var",
+        "tag": "VAR · Goal disallowed",
+        "title": "Norway's winner that wasn't",
+        "textHtml": "From a corner, <strong>Torbjørn Heggem</strong> bundles the ball home and Norway think they lead again. Video review rules it out: <strong>Haaland pushed an England player</strong> to the ground just before the delivery. Regulation ends 1–1."
+      },
+      {
+        "minute": 93,
+        "minuteLabel": "90+3'",
+        "type": "goal-away",
+        "tag": "Goal · England",
+        "title": "Bellingham. Again.",
+        "textHtml": "Deep into added time, a loose ball breaks England's way and <strong>Bellingham buries the winner</strong>, his second of the night. Norway protest furiously, and not without reason. More on that below."
+      },
+      {
+        "minute": 120,
+        "minuteLabel": "120'",
+        "type": "neutral",
+        "tag": "Full time · AET",
+        "title": "England hold on through extra time",
+        "textHtml": "Thirty more minutes in the heat, a Norwegian yellow card at 117', and England see it out. Norway's greatest ever World Cup run ends. England march on to a semi-final against Argentina."
+      }
+    ]
+  },
+  "stats": {
+    "kicker": "Part two",
+    "heading": "The numbers behind it",
+    "lede": "Tighter than the scoreline suggests. Norway created plenty. England were simply more precise where it counted.",
+    "rows": [
+      { "name": "Possession %", "home": 47, "away": 53 },
+      { "name": "Total shots", "home": 13, "away": 14 },
+      { "name": "Shots on target", "home": 5, "away": 8 },
+      { "name": "Corners", "home": 7, "away": 4 },
+      { "name": "Fouls", "home": 10, "away": 8 },
+      { "name": "Offsides", "home": 1, "away": 5 }
+    ],
+    "note": "Source: live match data feed, 11 July 2026. Figures over 120 minutes."
+  },
+  "charts": {
+    "kicker": "Part three",
+    "heading": "The match in charts",
+    "lede": "Hover or tap anything below. Every segment is the real feed data.",
+    "possession": {
+      "title": "Possession share",
+      "home": 47,
+      "away": 53
+    },
+    "shots": {
+      "title": "Where the shots went",
+      "categories": [
+        { "key": "on", "label": "On target" },
+        { "key": "off", "label": "Off target" },
+        { "key": "blk", "label": "Blocked" }
+      ],
+      "home": [5, 5, 3],
+      "away": [8, 3, 3]
+    },
+    "radar": {
+      "title": "Head to head · six-axis radar",
+      "axes": [
+        { "label": "Possession", "home": 47, "away": 53, "unit": "%" },
+        { "label": "Shots", "home": 13, "away": 14, "unit": "" },
+        { "label": "On target", "home": 5, "away": 8, "unit": "" },
+        { "label": "Corners", "home": 7, "away": 4, "unit": "" },
+        { "label": "Free kicks", "home": 8, "away": 10, "unit": "" },
+        { "label": "Throw-ins", "home": 14, "away": 22, "unit": "" }
+      ],
+      "sideHtml": "Each axis is scaled to whichever team led it, so the outer edge means <strong>best in match</strong>. Norway's shape leans toward corners and set-piece territory. England's leans toward precision and control.",
+      "note": "Click a team to isolate the other's shape. Hover any vertex for the raw number."
+    }
+  },
+  "squads": {
+    "title": "Squads used · filter by position",
+    "positions": [
+      { "key": "all", "label": "All" },
+      { "key": "goalkeeper", "label": "Goalkeepers" },
+      { "key": "defender", "label": "Defenders" },
+      { "key": "midfielder", "label": "Midfielders" },
+      { "key": "forward", "label": "Forwards" }
+    ],
+    "home": [
+      { "pos": "GK", "role": "goalkeeper", "name": "Ørjan Nyland" },
+      { "pos": "FW", "role": "forward", "name": "Julian Ryerson" },
+      { "pos": "DF", "role": "defender", "name": "Kristoffer Ajer" },
+      { "pos": "DF", "role": "defender", "name": "Torbjørn Heggem" },
+      { "pos": "DF", "role": "defender", "name": "David Møller Wolfe" },
+      { "pos": "MF", "role": "midfielder", "name": "Sander Berge" },
+      { "pos": "MF", "role": "midfielder", "name": "Martin Ødegaard" },
+      { "pos": "MF", "role": "midfielder", "name": "Patrick Berg" },
+      { "pos": "FW", "role": "forward", "name": "Alexander Sørloth" },
+      { "pos": "FW", "role": "forward", "name": "Erling Haaland" },
+      { "pos": "MF", "role": "midfielder", "name": "Andreas Schjelderup" },
+      { "pos": "FW", "role": "forward", "name": "Antonio Nusa" },
+      { "pos": "MF", "role": "midfielder", "name": "Oscar Bobb" },
+      { "pos": "DF", "role": "defender", "name": "Henrik Falchener" },
+      { "pos": "GK", "role": "goalkeeper", "name": "Sander Tangvik" }
+    ],
+    "away": [
+      { "pos": "GK", "role": "goalkeeper", "name": "Jordan Pickford" },
+      { "pos": "DF", "role": "defender", "name": "Ezri Konsa" },
+      { "pos": "DF", "role": "defender", "name": "John Stones" },
+      { "pos": "DF", "role": "defender", "name": "Marc Guéhi" },
+      { "pos": "DF", "role": "defender", "name": "Nico O'Reilly" },
+      { "pos": "MF", "role": "midfielder", "name": "Elliot Anderson" },
+      { "pos": "MF", "role": "midfielder", "name": "Declan Rice" },
+      { "pos": "FW", "role": "forward", "name": "Noni Madueke" },
+      { "pos": "MF", "role": "midfielder", "name": "Jude Bellingham" },
+      { "pos": "FW", "role": "forward", "name": "Anthony Gordon" },
+      { "pos": "FW", "role": "forward", "name": "Harry Kane" },
+      { "pos": "GK", "role": "goalkeeper", "name": "James Trafford" },
+      { "pos": "MF", "role": "midfielder", "name": "Eberechi Eze" },
+      { "pos": "MF", "role": "midfielder", "name": "Kobbie Mainoo" },
+      { "pos": "FW", "role": "forward", "name": "Marcus Rashford" }
+    ]
+  },
+  "controversy": {
+    "kicker": "Part four",
+    "heading": "Two calls Norway will replay forever",
+    "cards": [
+      {
+        "tag": "The disallowed goal",
+        "title": "Haaland's push",
+        "textHtml": "Heggem's second-half finish from a corner was ruled out on video review after <strong>Haaland shoved an England player</strong> to the ground moments before the kick was taken. From potential 2–1 lead to nothing in ninety seconds."
+      },
+      {
+        "tag": "The sky cam question",
+        "title": "Did the wire change the game?",
+        "textHtml": "Replays suggested the Norwegian keeper's clearance before Bellingham's winner <strong>clipped the overhead sky cam wire</strong>, changing the ball's flight before it dropped to England. FIFA said the ball's sensor data showed no evidence its trajectory was affected. Norway's bench disagreed. Loudly."
+      }
+    ]
+  },
+  "next": {
+    "kicker": "What's next",
+    "heading": "The semi-final",
+    "teams": ["England", "Argentina"],
+    "probabilities": [
+      { "label": "ENG", "pct": 37.9, "color": "#EFF2EC" },
+      { "label": "Draw", "pct": 30.8, "color": "rgba(239,242,236,.16)" },
+      { "label": "ARG", "pct": 31.3, "color": "#75AADB" }
+    ],
+    "metaLines": ["Wednesday 15 July 2026", "19:00 UTC", "Win probability at time of writing"]
+  },
+  "footer": {
+    "built": "Built with Claude Code · World Cup 2026 series",
+    "creditsHtml": "Data: live match feed &amp; FIFA match centre · Design &amp; build: <a href=\"https://www.linkedin.com/in/masad1\" target=\"_blank\" rel=\"noopener\">Muhammad Asadullah</a> · <a href=\"https://www.linkedin.com/in/masad1\" target=\"_blank\" rel=\"noopener\">Connect on LinkedIn</a>"
+  }
+}
