@@ -1,0 +1,17 @@
+{
+  "series": "World Cup 2026 · Match stories",
+  "tagline": "Every match told minute by minute through data.",
+  "stories": [
+    {
+      "page": "norway-england-story.html",
+      "data": "matches/norway-england-qf.json",
+      "round": "Quarter-final · Match 99",
+      "home": { "name": "Norway", "score": 1, "color": "#C8102E" },
+      "away": { "name": "England", "score": 2, "color": "#EFF2EC" },
+      "note": "AET",
+      "venue": "Hard Rock Stadium, Miami",
+      "date": "11 July 2026",
+      "blurb": "Bellingham twice, a disallowed Norway goal, and the sky-cam wire question."
+    }
+  ]
+}

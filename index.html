@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Cup 2026 · Match Stories</title>
+<meta name="description" content="FIFA World Cup 2026 match stories — every match told minute by minute through data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pitch:#0D1411;
+    --pitch-2:#111A16;
+    --chalk:#EFF2EC;
+    --chalk-dim:rgba(239,242,236,.55);
+    --chalk-faint:rgba(239,242,236,.16);
+    --amber:#E3A33B;
+    --max:1060px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:
+      radial-gradient(1200px 600px at 50% -10%, rgba(233,239,232,.07), transparent 60%),
+      var(--pitch);
+    color:var(--chalk);
+    font-family:'Archivo',sans-serif;
+    font-size:17px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    min-height:100svh;
+  }
+  ::selection{background:var(--amber);color:var(--pitch)}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  header{padding:110px 0 70px}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--chalk-dim);margin-bottom:26px;
+    display:flex;gap:14px;align-items:center;flex-wrap:wrap;
+  }
+  .eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--amber);display:inline-block}
+  h1{
+    font-family:'Anton',sans-serif;text-transform:uppercase;font-weight:400;
+    font-size:clamp(44px,8vw,96px);line-height:1;
+  }
+  .tagline{margin-top:24px;color:var(--chalk-dim);font-size:18px;max-width:560px}
+  main{padding-bottom:120px}
+  .stories{display:flex;flex-direction:column;gap:26px;margin-top:20px}
+  .story-card{
+    display:block;text-decoration:none;color:inherit;
+    border:1px solid var(--chalk-faint);
+    padding:38px 34px;position:relative;
+    transition:border-color .2s ease,background .2s ease,transform .2s ease;
+  }
+  .story-card::before{
+    content:'';position:absolute;top:0;left:0;width:44px;height:3px;
+    background:var(--card-accent,var(--amber));
+  }
+  .story-card:hover{border-color:var(--chalk-dim);background:var(--pitch-2);transform:translateY(-2px)}
+  .story-card .round{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--chalk-dim);display:block;margin-bottom:16px;
+  }
+  .story-card .fixture{
+    font-family:'Anton',sans-serif;text-transform:uppercase;
+    font-size:clamp(26px,4.4vw,44px);line-height:1.05;
+    display:flex;gap:.45em;align-items:baseline;flex-wrap:wrap;
+  }
+  .story-card .fixture .h{color:var(--card-home,var(--chalk))}
+  .story-card .fixture .a{color:var(--card-away,var(--chalk))}
+  .story-card .fixture .s{color:var(--chalk)}
+  .story-card .fixture .note{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;
+    color:var(--chalk-dim);align-self:center;
+  }
+  .story-card .meta{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;
+    color:var(--chalk-dim);margin-top:14px;
+  }
+  .story-card .blurb{color:var(--chalk-dim);margin-top:14px;max-width:620px}
+  .story-card .cta{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--chalk);margin-top:22px;display:inline-block;
+    border-bottom:1px solid var(--chalk-dim);padding-bottom:3px;
+  }
+  .story-card:hover .cta{border-bottom-color:var(--amber)}
+  .empty,.load-error{
+    font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--chalk-dim);line-height:2;
+  }
+  footer{border-top:1px solid var(--chalk-faint);padding:60px 0}
+  footer p{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--chalk-dim);letter-spacing:.06em}
+  :focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">
+      <span>FIFA World Cup 2026</span><span class="dot"></span>
+      <span>Data-driven match stories</span>
+    </div>
+    <h1>Match Stories</h1>
+    <p class="tagline" id="tagline">Every match told minute by minute through data.</p>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <div class="stories" id="stories"></div>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Built with Claude Code · World Cup 2026 series</p>
+  </div>
+</footer>
+<script>
+(function(){
+  var box = document.getElementById('stories');
+  function esc(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  fetch('matches/manifest.json')
+    .then(function(res){
+      if(!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
+    .then(function(manifest){
+      if(manifest.tagline) document.getElementById('tagline').textContent = manifest.tagline;
+      if(!manifest.stories.length){
+        box.innerHTML = '<p class="empty">No match stories yet.</p>';
+        return;
+      }
+      box.innerHTML = manifest.stories.map(function(m){
+        return '<a class="story-card" href="' + esc(m.page) + '"' +
+          ' style="--card-accent:' + esc(m.home.color) + ';--card-home:' + esc(m.home.color) + ';--card-away:' + esc(m.away.color) + '">' +
+          '<span class="round">' + esc(m.round) + '</span>' +
+          '<span class="fixture">' +
+            '<span class="h">' + esc(m.home.name) + '</span>' +
+            '<span class="s">' + m.home.score + '–' + m.away.score + '</span>' +
+            '<span class="a">' + esc(m.away.name) + '</span>' +
+            (m.note ? '<span class="note">' + esc(m.note) + '</span>' : '') +
+          '</span>' +
+          '<span class="meta">' + esc(m.venue) + ' · ' + esc(m.date) + '</span>' +
+          '<p class="blurb">' + esc(m.blurb) + '</p>' +
+          '<span class="cta">Read the story</span>' +
+        '</a>';
+      }).join('');
+    })
+    .catch(function(err){
+      box.innerHTML = '<p class="load-error">Could not load matches/manifest.json (' + esc(String(err.message || err)) + ').<br>' +
+        'Serve this folder over HTTP, e.g. <strong>python -m http.server</strong>, then reload.</p>';
+    });
+})();
+</script>
+</body>
+</html>
