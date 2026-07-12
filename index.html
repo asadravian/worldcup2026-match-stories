@@ -86,7 +86,14 @@
     font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--chalk-dim);line-height:2;
   }
   footer{border-top:1px solid var(--chalk-faint);padding:60px 0}
+  footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:baseline}
   footer p{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--chalk-dim);letter-spacing:.06em}
+  footer a{
+    color:var(--chalk);text-decoration:none;
+    border-bottom:1px solid var(--chalk-dim);
+    transition:border-color .2s ease,color .2s ease;
+  }
+  footer a:hover{color:#fff;border-bottom-color:var(--amber)}
   :focus-visible{outline:2px solid var(--amber);outline-offset:3px}
 </style>
 </head>
@@ -109,6 +116,10 @@
 <footer>
   <div class="wrap">
     <p>Built with Claude Code · World Cup 2026 series</p>
+    <p>Design &amp; build:
+      <a href="https://www.linkedin.com/in/masad1" target="_blank" rel="noopener">Muhammad Asadullah (Asad)</a>
+      · <a href="https://www.linkedin.com/in/masad1" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </p>
   </div>
 </footer>
 <script>
