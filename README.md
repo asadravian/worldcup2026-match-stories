@@ -1,10 +1,11 @@
-# World Cup 2026 · Match Stories
+# World Cup 2026 · Data-Driven Match Stories
 
-Interactive, scroll-told stories of FIFA World Cup 2026 matches — every match told
+
+Interactive, scroll-told stories of FIFA World Cup 2026 matches, every match told
 minute by minute through data. Read the first one, Norway 1–2 England (quarter-final,
-AET), live at:
+AET).
 
-**https://asadravian.github.io/worldcup2026-match-stories/**
+**Live site: https://asadravian.github.io/worldcup2026-match-stories/**
 
 Each story plays the match back as you scroll: a sticky match clock driven by scroll
 position, a minute-by-minute timeline of the moments that decided the game, animated
@@ -18,11 +19,11 @@ The design and the content are fully separated. A story page is a ~15-line HTML 
 that points at a JSON file; a shared engine does the rest.
 
 ```
-index.html                       Landing page — lists stories from matches/manifest.json
+index.html                       Landing page: lists stories from matches/manifest.json
 norway-england-story.html        Thin entry: <body data-match="matches/norway-england-qf.json">
-assets/story.js                  Render engine — fetches the JSON, builds the whole page,
+assets/story.js                  Render engine: fetches the JSON, builds the whole page,
                                  wires every interaction
-assets/story.css                 Shared styles — team colours are CSS custom properties
+assets/story.css                 Shared styles: team colours are CSS custom properties
                                  (--home / --away + derived tints) set from the JSON at runtime
 matches/norway-england-qf.json   All content for the Norway–England story
 matches/manifest.json            Story list for the landing page
@@ -46,7 +47,7 @@ No build step. The new story is live as soon as the three files are pushed.
 
 ## Zero JS libraries
 
-There are no dependencies, no frameworks and no build tooling — no chart library
+There are no dependencies, no frameworks and no build tooling, no chart library
 either. The donut is two stroked SVG circles with computed dash arrays, the radar is
 generated SVG geometry, the stat bars and shot slices are flex-sized divs, and the
 scroll clock, reveal animations and tooltips use plain `IntersectionObserver`, scroll
@@ -66,5 +67,5 @@ then open http://localhost:8000/.
 
 ## Credits
 
-[Claude Code](https://claude.com/claude-code) and Muhammad Asadullah (Asad) ([LinkedIn](https://www.linkedin.com/in/masad1))  — from the
+[Claude Code](https://claude.com/claude-code) and Muhammad Asadullah (Asad) ([LinkedIn](https://www.linkedin.com/in/masad1)), from the
 original one-off page through the JSON-driven refactor, the landing page and the GitHub Pages deployment.
