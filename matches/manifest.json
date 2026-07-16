@@ -3,6 +3,16 @@
   "tagline": "Every match told minute by minute through data.",
   "stories": [
     {
+      "page": "england-argentina-story.html",
+      "data": "matches/england-argentina-sf.json",
+      "round": "Semi-final",
+      "home": { "name": "England", "score": 1, "color": "#EFF2EC" },
+      "away": { "name": "Argentina", "score": 2, "color": "#75AADB" },
+      "venue": "Atlanta Stadium, Atlanta",
+      "date": "15 July 2026",
+      "blurb": "Gordon put England ahead — then Messi conjured Enzo Fernández and Lautaro Martínez goals in the final seven minutes."
+    },
+    {
       "page": "norway-england-story.html",
       "data": "matches/norway-england-qf.json",
       "round": "Quarter-final · Match 99",

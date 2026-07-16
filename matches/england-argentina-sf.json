@@ -1,0 +1,201 @@
+{
+  "id": "england-argentina-sf",
+  "meta": {
+    "title": "ENG 1–2 ARG · A Semi-final in Data",
+    "description": "England 1-2 Argentina, FIFA World Cup 2026 semi-final, told minute by minute through data."
+  },
+  "competition": {
+    "tournament": "FIFA World Cup 2026",
+    "round": "Semi-final",
+    "venue": "Atlanta Stadium, Atlanta · 15 July"
+  },
+  "teams": {
+    "home": { "name": "England", "short": "ENG", "color": "#EFF2EC", "textOnColor": "#0D1411" },
+    "away": { "name": "Argentina", "short": "ARG", "color": "#75AADB", "textOnColor": "#0D1411" }
+  },
+  "score": {
+    "home": 1,
+    "away": 2
+  },
+  "durationMinutes": 90,
+  "hero": {
+    "subHtml": "The defending champions, from the brink again. <strong>Anthony Gordon</strong> put England ahead in Atlanta — then <strong>Lionel Messi</strong> conjured Argentina's last-gasp turnaround: two goals in the final seven minutes."
+  },
+  "timeline": {
+    "kicker": "Part one",
+    "heading": "How it happened",
+    "lede": "England led for thirty minutes. Argentina needed seven to end it. The scroll bar is your match clock.",
+    "events": [
+      {
+        "minute": 0,
+        "minuteLabel": "0'",
+        "type": "neutral",
+        "tag": "Kick-off",
+        "title": "A home game in sky blue",
+        "textHtml": "Atlanta Stadium, and Argentina's fans vastly outnumber England's. The champions arrive having come from behind in every knockout match of their run. England arrive off the Bellingham night against Norway — with referee Ismail Elfath in the middle."
+      },
+      {
+        "minute": 25,
+        "minuteLabel": "1H",
+        "type": "neutral",
+        "tag": "First half",
+        "title": "Fouls, and not much football",
+        "textHtml": "A physical, disorganised opening: <strong>19 combined fouls and zero shots on target</strong> by the hydration break. Elliot Anderson takes the game's first booking for a foul on Messi, and a John Stones header is the closest anyone comes."
+      },
+      {
+        "minute": 55,
+        "minuteLabel": "55'",
+        "type": "goal-home",
+        "tag": "Goal · England",
+        "title": "Gordon breaks the deadlock",
+        "textHtml": "Harry Kane works it wide, <strong>Morgan Rogers</strong> delivers, and <strong>Anthony Gordon</strong> converts the cross. Against 64 per cent Argentine possession, England lead — and promptly retreat to protect it."
+      },
+      {
+        "minute": 85,
+        "minuteLabel": "85'",
+        "type": "goal-away",
+        "tag": "Goal · Argentina",
+        "title": "Enzo, from distance",
+        "textHtml": "A short corner is worked back to <strong>Enzo Fernández</strong>, who beats Pickford from long range. Thirty minutes of English backpedalling undone by one swing of the boot, and the stadium erupts."
+      },
+      {
+        "minute": 92,
+        "minuteLabel": "90+2'",
+        "type": "goal-away",
+        "tag": "Goal · Argentina",
+        "title": "Lautaro, from Messi's cross",
+        "textHtml": "Deep in stoppage time, <strong>Messi</strong> shapes a perfect cross and <strong>Lautaro Martínez</strong> finishes it. From 1–0 down to 2–1 up in seven minutes — the comeback champions do it again."
+      },
+      {
+        "minute": 99,
+        "minuteLabel": "FT",
+        "type": "neutral",
+        "tag": "Full time",
+        "title": "The champions march on",
+        "textHtml": "Nine minutes of stoppage time, England suddenly the ones chasing, Argentina seeing it out. The 2022 winners reach another final. England's wait goes on."
+      }
+    ]
+  },
+  "stats": {
+    "kicker": "Part two",
+    "heading": "The numbers behind it",
+    "lede": "One-sided in a way the scoreline flatters. Argentina had the ball, the chances and the patience. England had one cross — and thirty good minutes.",
+    "rows": [
+      { "name": "Possession %", "home": 36, "away": 64 },
+      { "name": "Expected goals (xG)", "home": 0.53, "away": 1.84 },
+      { "name": "Total shots", "home": 5, "away": 15 },
+      { "name": "Shots on target", "home": 2, "away": 5 },
+      { "name": "Fouls", "home": 11, "away": 15 },
+      { "name": "Saves", "home": 3, "away": 1 }
+    ],
+    "note": "Source: FIFA match centre & ESPN match data, 15 July 2026. Figures over 90 minutes."
+  },
+  "charts": {
+    "kicker": "Part three",
+    "heading": "The match in charts",
+    "lede": "Hover or tap anything below. Every segment is the real feed data.",
+    "possession": {
+      "title": "Possession share",
+      "home": 36,
+      "away": 64
+    },
+    "shots": {
+      "title": "Where the shots went",
+      "categories": [
+        { "key": "on", "label": "On target" },
+        { "key": "off", "label": "Off target or blocked" }
+      ],
+      "home": [2, 3],
+      "away": [5, 10]
+    },
+    "radar": {
+      "title": "Head to head · six-axis radar",
+      "axes": [
+        { "label": "Possession", "home": 36, "away": 64, "unit": "%" },
+        { "label": "Shots", "home": 5, "away": 15, "unit": "" },
+        { "label": "On target", "home": 2, "away": 5, "unit": "" },
+        { "label": "Big chances", "home": 1, "away": 3, "unit": "" },
+        { "label": "Acc. passes", "home": 273, "away": 537, "unit": "" },
+        { "label": "Duels won", "home": 50, "away": 52, "unit": "" }
+      ],
+      "sideHtml": "Each axis is scaled to whichever team led it, so the outer edge means <strong>best in match</strong>. Argentina's shape swallows almost the whole chart — possession, passing, chances. England stayed level on duels, and almost nothing else.",
+      "note": "Click a team to isolate the other's shape. Hover any vertex for the raw number."
+    }
+  },
+  "squads": {
+    "title": "Squads used · filter by position",
+    "positions": [
+      { "key": "all", "label": "All" },
+      { "key": "goalkeeper", "label": "Goalkeepers" },
+      { "key": "defender", "label": "Defenders" },
+      { "key": "midfielder", "label": "Midfielders" },
+      { "key": "forward", "label": "Forwards" }
+    ],
+    "home": [
+      { "pos": "GK", "role": "goalkeeper", "name": "Jordan Pickford" },
+      { "pos": "DF", "role": "defender", "name": "Reece James" },
+      { "pos": "DF", "role": "defender", "name": "John Stones" },
+      { "pos": "DF", "role": "defender", "name": "Marc Guéhi" },
+      { "pos": "DF", "role": "defender", "name": "Djed Spence" },
+      { "pos": "MF", "role": "midfielder", "name": "Declan Rice" },
+      { "pos": "MF", "role": "midfielder", "name": "Elliot Anderson" },
+      { "pos": "MF", "role": "midfielder", "name": "Morgan Rogers" },
+      { "pos": "MF", "role": "midfielder", "name": "Jude Bellingham" },
+      { "pos": "FW", "role": "forward", "name": "Anthony Gordon" },
+      { "pos": "FW", "role": "forward", "name": "Harry Kane" },
+      { "pos": "DF", "role": "defender", "name": "Ezri Konsa" },
+      { "pos": "DF", "role": "defender", "name": "Dan Burn" },
+      { "pos": "DF", "role": "defender", "name": "Nico O'Reilly" },
+      { "pos": "FW", "role": "forward", "name": "Marcus Rashford" },
+      { "pos": "FW", "role": "forward", "name": "Ivan Toney" }
+    ],
+    "away": [
+      { "pos": "GK", "role": "goalkeeper", "name": "Emiliano Martínez" },
+      { "pos": "DF", "role": "defender", "name": "Nahuel Molina" },
+      { "pos": "DF", "role": "defender", "name": "Cristian Romero" },
+      { "pos": "DF", "role": "defender", "name": "Lisandro Martínez" },
+      { "pos": "DF", "role": "defender", "name": "Nicolás Tagliafico" },
+      { "pos": "MF", "role": "midfielder", "name": "Leandro Paredes" },
+      { "pos": "MF", "role": "midfielder", "name": "Enzo Fernández" },
+      { "pos": "MF", "role": "midfielder", "name": "Alexis Mac Allister" },
+      { "pos": "FW", "role": "forward", "name": "Giuliano Simeone" },
+      { "pos": "FW", "role": "forward", "name": "Julián Álvarez" },
+      { "pos": "FW", "role": "forward", "name": "Lionel Messi" },
+      { "pos": "MF", "role": "midfielder", "name": "Rodrigo De Paul" },
+      { "pos": "DF", "role": "defender", "name": "Gonzalo Montiel" },
+      { "pos": "DF", "role": "defender", "name": "Nicolás Otamendi" },
+      { "pos": "FW", "role": "forward", "name": "Nicolás González" },
+      { "pos": "FW", "role": "forward", "name": "Lautaro Martínez" }
+    ]
+  },
+  "controversy": {
+    "kicker": "Part four",
+    "heading": "Two calls England will replay forever",
+    "cards": [
+      {
+        "tag": "The tactical question",
+        "title": "The retreat after 1–0",
+        "textHtml": "From the 55th minute England barely crossed halfway, inviting <strong>wave after wave of Argentine pressure</strong> onto a back line that had defended superbly all tournament. It held for thirty minutes. It needed thirty-five."
+      },
+      {
+        "tag": "The Messi factor",
+        "title": "You cannot sit off him",
+        "textHtml": "Given the freedom of a deep block to play against, <strong>Messi engineered the turnaround</strong> — the corner routine that freed Enzo Fernández, then the stoppage-time cross Lautaro Martínez buried. Argentina have trailed in every knockout round. They've won them all."
+      }
+    ]
+  },
+  "next": {
+    "kicker": "What's next",
+    "heading": "The final",
+    "teams": ["Argentina", "Spain"],
+    "probabilities": [
+      { "label": "ARG", "pct": 44.4, "color": "#75AADB" },
+      { "label": "ESP", "pct": 55.6, "color": "#DA291C" }
+    ],
+    "metaLines": ["Sunday 19 July 2026", "MetLife Stadium, New Jersey", "Implied from match odds (ARG +125)"]
+  },
+  "footer": {
+    "built": "Built with Claude Code · World Cup 2026 series",
+    "creditsHtml": "Data: live match feed &amp; FIFA match centre · Design &amp; build: <a href=\"https://www.linkedin.com/in/masad1\" target=\"_blank\" rel=\"noopener\">Muhammad Asadullah</a> · <a href=\"https://www.linkedin.com/in/masad1\" target=\"_blank\" rel=\"noopener\">Connect on LinkedIn</a>"
+  }
+}
